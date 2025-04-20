@@ -236,7 +236,10 @@ static void nn_sinproc_shutdown_events (struct nn_sinproc *self, int src,
                 self->state = NN_SINPROC_STATE_STOPPING;
             }
             return;
+        default:
+            break;
         }
+        /* fall through */  // Suppress implicit fallthrough warning
     case NN_SINPROC_SRC_PEER:
         switch (type) {
         case NN_SINPROC_RECEIVED:
@@ -499,4 +502,3 @@ static void nn_sinproc_handler (struct nn_fsm *self, int src, int type,
         nn_fsm_bad_state (sinproc->state, src, type);
     }
 }
-

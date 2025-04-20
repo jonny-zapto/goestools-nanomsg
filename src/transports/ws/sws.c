@@ -894,7 +894,7 @@ static void nn_sws_handler (struct nn_fsm *self, int src, int type,
             default:
                 nn_fsm_bad_action (sws->state, src, type);
             }
-
+        /* fall through */  // Suppress implicit fallthrough warning
         default:
             nn_fsm_bad_source (sws->state, src, type);
         }
@@ -927,7 +927,7 @@ static void nn_sws_handler (struct nn_fsm *self, int src, int type,
             default:
                 nn_fsm_bad_action (sws->state, src, type);
             }
-
+        /* fall through */  // Suppress implicit fallthrough warning
         default:
             nn_fsm_bad_source (sws->state, src, type);
         }
@@ -962,7 +962,7 @@ static void nn_sws_handler (struct nn_fsm *self, int src, int type,
             default:
                 nn_fsm_bad_action (sws->state, src, type);
             }
-
+        /* fall through */  // Suppress implicit fallthrough warning
         default:
             nn_fsm_bad_source (sws->state, src, type);
         }
@@ -1483,10 +1483,11 @@ static void nn_sws_handler (struct nn_fsm *self, int src, int type,
             }
 
             break;
-
+        /* fall through */  // Suppress implicit fallthrough warning
         default:
             nn_fsm_bad_source (sws->state, src, type);
         }
+        /* fall through */  // Suppress implicit fallthrough warning
 
 /******************************************************************************/
 /*  CLOSING_CONNECTION state.                                                 */
@@ -1515,7 +1516,7 @@ static void nn_sws_handler (struct nn_fsm *self, int src, int type,
             default:
                 nn_fsm_bad_action (sws->state, src, type);
             }
-
+        /* fall through */  // Suppress implicit fallthrough warning
         default:
             nn_fsm_bad_source (sws->state, src, type);
         }
@@ -1537,7 +1538,7 @@ static void nn_sws_handler (struct nn_fsm *self, int src, int type,
             default:
                 nn_fsm_bad_action (sws->state, src, type);
             }
-
+        /* fall through */  // Suppress implicit fallthrough warning
         default:
             nn_fsm_bad_source (sws->state, src, type);
         }
